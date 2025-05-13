@@ -1,0 +1,61 @@
+{
+    "timestamp": "2025-04-14T15:30:45Z",
+    "location": {
+      "room": "living_room",
+      "position": "east_window"
+    },
+    "environmental_data": {
+      "air": {
+        "humidity": 65.4,
+        "temperature": 22.3,
+        "quality": 87
+      },
+      "soil": {
+        "humidity": 78.2,
+        "ph": 6.5,
+        "nutrients": {
+          "nitrogen": 150,
+          "phosphorus": 75,
+          "potassium": 200
+        }
+      },
+      "light": {
+        "intensity": 5400,
+        "duration": 6.5,
+        "spectrum": "full_spectrum"
+      },
+      "water_reservoir": {
+        "level": 450,
+        "capacity": 1000
+      }
+    },
+    "external_factors": {
+      "weather": {
+        "temperature": 20.5,
+        "precipitation": 0,
+        "cloud_cover": 25,
+        "moon_phase": "waxing_gibbous"
+      },
+      "market_indices": {
+        "dow_jones": 36789,
+        "nasdaq": 17456
+      },
+      "news": [
+        "Local elections scheduled next month",
+        "New plant growth hormone identified",
+        "Water conservation measures announced in region"
+      ]
+    },
+    "media": {
+      "image": {
+        "id": "img_20250414_153045",
+        "reference": "plant001/images/20250414_153045.jpg"
+      }
+    },
+    "plant_status": {
+      "health_rating": 85,
+      "growth_stage": "vegetative",
+      "last_watered": "2025-04-13T09:15:00Z",
+      "observations": "New leaf forming on east-facing branch"
+    }
+  }
