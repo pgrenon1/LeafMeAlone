@@ -9,21 +9,21 @@ The system collects and stores the following data:
 ### Environmental Data
 - Location (living_room, bedroom, kitchen, balcony)
 - Air conditions:
-  - Humidity (40-80%)
-  - Temperature (18-28°C)
+  - Humidity
+  - Temperature
 - Soil conditions:
-  - Humidity (60-90%)
+  - Humidity
 - Light conditions:
-  - Intensity (4000-6000 lux)
-  - Duration (4-8 hours)
+  - Intensity
+  - Duration
 
 ### External Factors
 - Weather conditions:
-  - Temperature (15-30°C)
-  - Precipitation (0-10mm)
-  - Cloud cover (0-100%)
+  - Temperature
+  - Precipitation
+  - Cloud cover
   - Moon phase
-  - Air quality (70-95)
+  - Air quality
 - News updates
   - Sports
   - Politics
