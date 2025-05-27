@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-MuddyBuddy Sensor Reader
+LeafMeAlone Sensor Reader
 This script reads data from various sensors connected to a Raspberry Pi
-and sends it to the MuddyBuddy API.
+and sends it to the LeafMeAlone API.
 """
 
 import time
@@ -121,7 +121,7 @@ def format_data(sensor_data, weather_data, manual_data):
     return data
 
 def send_to_api(data):
-    """Send sensor data to MuddyBuddy API"""
+    """Send sensor data to LeafMeAlone API"""
     try:
         response = requests.post(API_URL, json=data)
         if response.status_code == 201:
@@ -136,7 +136,7 @@ def send_to_api(data):
 
 def main():
     """Gather data from all sources and send it to the API"""
-    print("Starting MuddyBuddy sensor reader...")
+    print("Starting LeafMeAlone sensor reader...")
     
     try:
         # 1. Get data from sensors
