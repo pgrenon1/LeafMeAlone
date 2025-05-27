@@ -1,32 +1,31 @@
 {
-    "timestamp": "2025-04-14T15:30:45Z",
-    
-      "location": "living_room",
-      "air": {
-        "humidity": 65.4,
-        "temperature": 22.3
-      },
-      "soil": {
-        "humidity": 78.2
-      },
-      "light": {
-        "intensity": 5400,
-        "duration": 6.5
-      },
-      "weather": {
-        "temperature": 20.5,
-        "precipitation": 0,
-        "cloud_cover": 25,
-        "moon_phase": "waxing_gibbous",
-        "air_quality": 87
-      },
-      "market_indices": {
-        "dow_jones": 36789,
-        "nasdaq": 17456
-      },
-      "news": [
-        "Local elections scheduled next month",
-        "New plant growth hormone identified",
-        "Water conservation measures announced in region"
-      ]
+  "timestamp": "2025-04-14T15:30:45Z",
+  "location": "living_room",
+  "air": {
+    "humidity": 65.4,
+    "temperature": 22.3
+  },
+  "soil": {
+    "humidity": 78.2
+  },
+  "light": {
+    "intensity": 5400,
+    "duration": 6.5
+  },
+  "weather": {
+    "temperature": 20.5,
+    "precipitation": 0,
+    "cloud_cover": 25,
+    "moon_phase": "waxing_gibbous",
+    "air_quality": 87
+  },
+  "market_indices": {
+    "dow_jones": 36789,
+    "nasdaq": 17456
+  },
+  "news": [
+    "Local elections scheduled next month",
+    "New plant growth hormone identified",
+    "Water conservation measures announced in region"
+  ]
 }
