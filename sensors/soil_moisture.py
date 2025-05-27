@@ -7,7 +7,7 @@ This module provides functions to read soil moisture from a capacitive sensor.
 import RPi.GPIO as GPIO
 import time
 from typing import Optional
-from .config import SOIL_MOISTURE_CONFIG
+from config import SOIL_MOISTURE_CONFIG
 
 class SoilMoistureSensor:
     def __init__(self, pin: int = SOIL_MOISTURE_CONFIG["pin"]):
@@ -68,6 +68,8 @@ class SoilMoistureSensor:
         try:
             # Read raw value from sensor
             raw_value = GPIO.input(self.pin)
+
+            print(f"Raw value: {raw_value}")
             
             # Convert to percentage (adjust these values based on your sensor calibration)
             # You might need to adjust these values based on your specific sensor
@@ -88,4 +90,20 @@ class SoilMoistureSensor:
 
     def cleanup(self):
         """Clean up GPIO resources"""
-        GPIO.cleanup(self.pin) 
+        GPIO.cleanup(self.pin)
+
+if __name__ == "__main__":
+    try:
+        sensor = SoilMoistureSensor()
+        print("Reading soil moisture values. Press Ctrl+C to stop.")
+        
+        while True:
+            moisture = sensor.read()
+            if moisture is not None:
+                print(f"Soil Moisture: {moisture:.1f}%")
+            time.sleep(2)
+            
+    except KeyboardInterrupt:
+        print("\nStopping sensor readings...")
+    finally:
+        sensor.cleanup() 
