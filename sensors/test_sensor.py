@@ -5,7 +5,7 @@ This script demonstrates the functionality of the SoilMoistureSensor class.
 """
 
 import time
-from soil_moisture import SoilMoistureSensor
+from sensors.soil_moisture import SoilMoistureSensor
 
 def test_soil_moisture_sensor():
     try:
