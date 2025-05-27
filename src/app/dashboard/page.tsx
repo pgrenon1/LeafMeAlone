@@ -106,113 +106,113 @@ export default function Dashboard() {
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-green-800 text-center">Plant Dashboard</h1>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <Card className="transform transition-all duration-300 hover:scale-105 bg-white/80 backdrop-blur-sm">
+          <Card className="transform transition-all duration-300 hover:scale-105 bg-white/80 border-[#4A9E9E]">
             <CardHeader>
-              <CardTitle className="text-green-700">Air Conditions</CardTitle>
+              <CardTitle className="text-[#1A4D3C]">Air Conditions</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
-                <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
-                  <span className="text-gray-600">Temperature</span>
-                  <span className="text-xl font-semibold text-green-700">{data.environmental_data.air.temperature}°C</span>
+                <div className="flex items-center justify-between p-3 bg-white/50 rounded-lg">
+                  <span className="text-[#1A4D3C]">Temperature</span>
+                  <span className="text-xl font-semibold text-[#1A4D3C]">{data.environmental_data.air.temperature}°C</span>
                 </div>
-                <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
-                  <span className="text-gray-600">Humidity</span>
-                  <span className="text-xl font-semibold text-green-700">{data.environmental_data.air.humidity}%</span>
+                <div className="flex items-center justify-between p-3 bg-white/50 rounded-lg">
+                  <span className="text-[#1A4D3C]">Humidity</span>
+                  <span className="text-xl font-semibold text-[#1A4D3C]">{data.environmental_data.air.humidity}%</span>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="transform transition-all duration-300 hover:scale-105 bg-white/80 backdrop-blur-sm">
+          <Card className="transform transition-all duration-300 hover:scale-105 bg-white/80 border-[#F4B400]">
             <CardHeader>
-              <CardTitle className="text-amber-700">Soil Conditions</CardTitle>
+              <CardTitle className="text-[#B8860B]">Soil Conditions</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
-                <div className="flex items-center justify-between p-3 bg-amber-50 rounded-lg">
-                  <span className="text-gray-600">Humidity</span>
-                  <span className="text-xl font-semibold text-amber-700">{data.environmental_data.soil.humidity}%</span>
+                <div className="flex items-center justify-between p-3 bg-white/50 rounded-lg">
+                  <span className="text-[#B8860B]">Humidity</span>
+                  <span className="text-xl font-semibold text-[#B8860B]">{data.environmental_data.soil.humidity}%</span>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="transform transition-all duration-300 hover:scale-105 bg-white/80 backdrop-blur-sm">
+          <Card className="transform transition-all duration-300 hover:scale-105 bg-white/80 border-[#1E90FF]">
             <CardHeader>
-              <CardTitle className="text-yellow-700">Light Conditions</CardTitle>
+              <CardTitle className="text-[#0066CC]">Light Conditions</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
-                <div className="flex items-center justify-between p-3 bg-yellow-50 rounded-lg">
-                  <span className="text-gray-600">Intensity</span>
-                  <span className="text-xl font-semibold text-yellow-700">{data.environmental_data.light.intensity} lux</span>
+                <div className="flex items-center justify-between p-3 bg-white/50 rounded-lg">
+                  <span className="text-[#0066CC]">Intensity</span>
+                  <span className="text-xl font-semibold text-[#0066CC]">{data.environmental_data.light.intensity} lux</span>
                 </div>
-                <div className="flex items-center justify-between p-3 bg-yellow-50 rounded-lg">
-                  <span className="text-gray-600">Duration</span>
-                  <span className="text-xl font-semibold text-yellow-700">{data.environmental_data.light.duration} hours</span>
+                <div className="flex items-center justify-between p-3 bg-white/50 rounded-lg">
+                  <span className="text-[#0066CC]">Duration</span>
+                  <span className="text-xl font-semibold text-[#0066CC]">{data.environmental_data.light.duration} hours</span>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="transform transition-all duration-300 hover:scale-105 bg-white/80 backdrop-blur-sm">
+          <Card className="transform transition-all duration-300 hover:scale-105 bg-white/80 border-[#4169E1]">
             <CardHeader>
-              <CardTitle className="text-blue-700">Weather</CardTitle>
+              <CardTitle className="text-[#0000CD]">Weather</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
-                <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
-                  <span className="text-gray-600">Temperature</span>
-                  <span className="text-xl font-semibold text-blue-700">{data.external_factors.weather.temperature}°C</span>
+                <div className="flex items-center justify-between p-3 bg-white/50 rounded-lg">
+                  <span className="text-[#0000CD]">Temperature</span>
+                  <span className="text-xl font-semibold text-[#0000CD]">{data.external_factors.weather.temperature}°C</span>
                 </div>
-                <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
-                  <span className="text-gray-600">Precipitation</span>
-                  <span className="text-xl font-semibold text-blue-700">{data.external_factors.weather.precipitation}mm</span>
+                <div className="flex items-center justify-between p-3 bg-white/50 rounded-lg">
+                  <span className="text-[#0000CD]">Precipitation</span>
+                  <span className="text-xl font-semibold text-[#0000CD]">{data.external_factors.weather.precipitation}mm</span>
                 </div>
-                <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
-                  <span className="text-gray-600">Cloud Cover</span>
-                  <span className="text-xl font-semibold text-blue-700">{data.external_factors.weather.cloud_cover}%</span>
+                <div className="flex items-center justify-between p-3 bg-white/50 rounded-lg">
+                  <span className="text-[#0000CD]">Cloud Cover</span>
+                  <span className="text-xl font-semibold text-[#0000CD]">{data.external_factors.weather.cloud_cover}%</span>
                 </div>
-                <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
-                  <span className="text-gray-600">Air Quality</span>
-                  <span className="text-xl font-semibold text-blue-700">{data.external_factors.weather.air_quality}</span>
+                <div className="flex items-center justify-between p-3 bg-white/50 rounded-lg">
+                  <span className="text-[#0000CD]">Air Quality</span>
+                  <span className="text-xl font-semibold text-[#0000CD]">{data.external_factors.weather.air_quality}</span>
                 </div>
-                <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
-                  <span className="text-gray-600">Moon Phase</span>
-                  <span className="text-xl font-semibold text-blue-700">{data.external_factors.weather.moon_phase}</span>
+                <div className="flex items-center justify-between p-3 bg-white/50 rounded-lg">
+                  <span className="text-[#0000CD]">Moon Phase</span>
+                  <span className="text-xl font-semibold text-[#0000CD]">{data.external_factors.weather.moon_phase}</span>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="transform transition-all duration-300 hover:scale-105 bg-white/80 backdrop-blur-sm">
+          <Card className="transform transition-all duration-300 hover:scale-105 bg-white/80 border-[#9370DB]">
             <CardHeader>
-              <CardTitle className="text-purple-700">Market Indices</CardTitle>
+              <CardTitle className="text-[#8A2BE2]">Market Indices</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
-                <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
-                  <span className="text-gray-600">Dow Jones</span>
-                  <span className="text-xl font-semibold text-purple-700">{data.external_factors.market_indices.dow_jones}</span>
+                <div className="flex items-center justify-between p-3 bg-white/50 rounded-lg">
+                  <span className="text-[#8A2BE2]">Dow Jones</span>
+                  <span className="text-xl font-semibold text-[#8A2BE2]">{data.external_factors.market_indices.dow_jones}</span>
                 </div>
-                <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
-                  <span className="text-gray-600">NASDAQ</span>
-                  <span className="text-xl font-semibold text-purple-700">{data.external_factors.market_indices.nasdaq}</span>
+                <div className="flex items-center justify-between p-3 bg-white/50 rounded-lg">
+                  <span className="text-[#8A2BE2]">NASDAQ</span>
+                  <span className="text-xl font-semibold text-[#8A2BE2]">{data.external_factors.market_indices.nasdaq}</span>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="transform transition-all duration-300 hover:scale-105 bg-white/80 backdrop-blur-sm">
+          <Card className="transform transition-all duration-300 hover:scale-105 bg-white/80 border-[#20B2AA]">
             <CardHeader>
-              <CardTitle className="text-indigo-700">Latest News</CardTitle>
+              <CardTitle className="text-[#008B8B]">Latest News</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
                 {data.external_factors.news.map((item, index) => (
-                  <div key={index} className="p-3 bg-indigo-50 rounded-lg">
-                    <p className="text-gray-700">{item}</p>
+                  <div key={index} className="p-3 bg-white/50 rounded-lg">
+                    <p className="text-[#008B8B]">{item}</p>
                   </div>
                 ))}
               </div>
