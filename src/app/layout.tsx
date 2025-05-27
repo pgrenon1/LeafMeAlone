@@ -6,7 +6,7 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Muddy Buddy - Plant Dashboard',
+  title: 'LeafMeAlone - Plant Dashboard',
   description: 'Monitor your plant\'s health and environment',
 }
 
