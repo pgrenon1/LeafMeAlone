@@ -69,3 +69,35 @@ mongosh "your_mongodb_connection_string"
 use LeafMeAlone
 db.plant_data.find().pretty()
 ```
+
+## Running the Application
+
+1. Make sure you have all dependencies installed:
+```bash
+npm install
+# or
+yarn install
+```
+
+2. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+3. Open your web browser and navigate to:
+```
+http://localhost:3000/dashboard
+```
+
+The application will be running in development mode. You can start editing the page by modifying files in the `app` directory. The page will auto-update as you edit the files.
+
+For production deployment:
+```bash
+npm run build
+npm start
+# or
+yarn build
+yarn start
+```
