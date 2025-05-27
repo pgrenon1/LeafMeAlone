@@ -1,4 +1,4 @@
-from db_connection import DatabaseConnection
+from database.db_connection import DatabaseConnection
 
 def main():
     # Initialize database connection

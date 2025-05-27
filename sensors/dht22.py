@@ -5,6 +5,7 @@ This module provides functions to read temperature and humidity from a DHT22 sen
 """
 
 import Adafruit_DHT
+import RPi.GPIO as GPIO
 from typing import Optional, Tuple
 from .config import DHT22_CONFIG
 
@@ -57,3 +58,13 @@ class DHT22Sensor:
         """
         reading = self.read()
         return reading[1] if reading else None 
+
+    def cleanup(self):
+        """Clean up GPIO resources"""
+        # The Adafruit_DHT library might handle GPIO internally, 
+        # but we'll clean up our pin just in case
+        try:
+            GPIO.cleanup(self.pin)
+        except:
+            # If GPIO wasn't set up by us directly, this might fail
+            pass 

@@ -1,6 +1,6 @@
 {
     "timestamp": "2025-04-14T15:30:45Z",
-    "environmental_data": {
+    
       "location": "living_room",
       "air": {
         "humidity": 65.4,
@@ -12,9 +12,7 @@
       "light": {
         "intensity": 5400,
         "duration": 6.5
-      }
-    },
-    "external_factors": {
+      },
       "weather": {
         "temperature": 20.5,
         "precipitation": 0,
@@ -31,5 +29,4 @@
         "New plant growth hormone identified",
         "Water conservation measures announced in region"
       ]
-    }
 }

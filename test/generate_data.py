@@ -1,7 +1,7 @@
 import json
 import random
 from datetime import datetime, timedelta
-from db_connection import DatabaseConnection
+from database.db_connection import DatabaseConnection
 
 def generate_random_float(min_val: float, max_val: float, decimals: int = 1) -> float:
     return round(random.uniform(min_val, max_val), decimals)
