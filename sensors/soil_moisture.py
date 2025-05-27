@@ -7,7 +7,7 @@ This module provides functions to read soil moisture from a capacitive sensor.
 import RPi.GPIO as GPIO
 import time
 from typing import Optional
-from sensors.config import SOIL_MOISTURE_CONFIG
+from config import SOIL_MOISTURE_CONFIG
 
 class SoilMoistureSensor:
     def __init__(self, pin: int = SOIL_MOISTURE_CONFIG["pin"]):
