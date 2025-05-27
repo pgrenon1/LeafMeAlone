@@ -1,5 +1,5 @@
 {
   "/not-found": "app/not-found.js",
-  "/dashboard/page": "app/dashboard/page.js",
-  "/api/plant-data/route": "app/api/plant-data/route.js"
+  "/api/plant-data/route": "app/api/plant-data/route.js",
+  "/dashboard/page": "app/dashboard/page.js"
 }
