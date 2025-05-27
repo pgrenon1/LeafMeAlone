@@ -68,6 +68,8 @@ class SoilMoistureSensor:
         try:
             # Read raw value from sensor
             raw_value = GPIO.input(self.pin)
+
+            print(f"Raw value: {raw_value}")
             
             # Convert to percentage (adjust these values based on your sensor calibration)
             # You might need to adjust these values based on your specific sensor
