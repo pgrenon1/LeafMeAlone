@@ -88,4 +88,20 @@ class SoilMoistureSensor:
 
     def cleanup(self):
         """Clean up GPIO resources"""
-        GPIO.cleanup(self.pin) 
+        GPIO.cleanup(self.pin)
+
+if __name__ == "__main__":
+    try:
+        sensor = SoilMoistureSensor()
+        print("Reading soil moisture values. Press Ctrl+C to stop.")
+        
+        while True:
+            moisture = sensor.read()
+            if moisture is not None:
+                print(f"Soil Moisture: {moisture:.1f}%")
+            time.sleep(2)
+            
+    except KeyboardInterrupt:
+        print("\nStopping sensor readings...")
+    finally:
+        sensor.cleanup() 
