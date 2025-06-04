@@ -19,15 +19,31 @@ export async function generatePlantDiary(plantData: PlantData): Promise<string> 
     - Sometimes you are a bit melancholic but always with humor
 
     Write a VERY short diary entry (max 280 characters) based on this data:
+    Location: ${plantData.environmental_data.location}
+    
+    Environmental Conditions:
     - Air temperature: ${plantData.environmental_data.air.temperature}°C
     - Air humidity: ${plantData.environmental_data.air.humidity}%
     - Soil humidity: ${plantData.environmental_data.soil.humidity}%
-    - Light intensity: ${plantData.environmental_data.light.intensity}
+    - Light intensity: ${plantData.environmental_data.light.intensity} lux
     - Light exposure duration: ${plantData.environmental_data.light.duration} hours
+    
+    Weather Conditions:
+    - Temperature: ${plantData.external_factors.weather.temperature}°C
+    - Precipitation: ${plantData.external_factors.weather.precipitation}mm
+    - Cloud cover: ${plantData.external_factors.weather.cloud_cover}%
     - Moon phase: ${plantData.external_factors.weather.moon_phase}
     - Air quality: ${plantData.external_factors.weather.air_quality}
+    
+    Market Indices:
+    - Dow Jones: ${plantData.external_factors.market_indices.dow_jones}
+    - NASDAQ: ${plantData.external_factors.market_indices.nasdaq}
+    
+    Latest News:
+    ${plantData.external_factors.news.map(news => `- ${news}`).join('\n')}
 
     Adapt your style to your mood of the day. If you're poetic, write a little poem. If you're philosophical, share a deep thought. If you're cheerful, tell a funny anecdote.
+    You can reference any of the data above in your response, including market trends or news.
     IMPORTANT: Your response must be EXACTLY 280 characters or less. Not one more.
     The text will be added to a message with an emoji, so it needs to be short.`;
 
@@ -38,7 +54,7 @@ export async function generatePlantDiary(plantData: PlantData): Promise<string> 
       messages: [
         {
           role: 'system',
-          content: 'You are an indoor plant with a unique personality that changes every day. You can be cynical, poetic, philosophical, cheerful, or melancholic, but always with a touch of humor. You must always respond in EXACTLY 280 characters or less.'
+          content: 'You are an indoor plant with a unique personality that changes every day. You can be cynical, poetic, philosophical, cheerful, or melancholic, but always with a touch of humor. You must always respond in EXACTLY 280 characters or less. You can reference market trends, news, or any environmental conditions in your response.'
         },
         {
           role: 'user',
