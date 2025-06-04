@@ -25,6 +25,24 @@ interface PostWithInteractions extends PlantDiaryPost {
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions';
 
+async function ensureCollectionsExist(db: any) {
+  // Vérifier si les collections existent
+  const collections = await db.listCollections().toArray();
+  const collectionNames = collections.map((c: any) => c.name);
+
+  // Créer la collection plant_diary si elle n'existe pas
+  if (!collectionNames.includes('plant_diary')) {
+    await db.createCollection('plant_diary');
+    console.log('Collection plant_diary created');
+  }
+
+  // Créer la collection post_interactions si elle n'existe pas
+  if (!collectionNames.includes('post_interactions')) {
+    await db.createCollection('post_interactions');
+    console.log('Collection post_interactions created');
+  }
+}
+
 export async function generatePlantDiary(plantData: PlantData): Promise<string> {
   if (!OPENROUTER_API_KEY) {
     console.error('OpenRouter API key is missing');
@@ -34,6 +52,10 @@ export async function generatePlantDiary(plantData: PlantData): Promise<string> 
   // Récupérer l'historique des posts avec leurs interactions
   const client = await clientPromise;
   const db = client.db('LeafMeAlone');
+
+  // S'assurer que les collections existent
+  await ensureCollectionsExist(db);
+
   const diaryCollection = db.collection<PlantDiaryPost>('plant_diary');
   const interactionsCollection = db.collection<PostInteraction>('post_interactions');
   
@@ -172,7 +194,8 @@ export async function generatePlantDiary(plantData: PlantData): Promise<string> 
       plantData: plantData
     };
 
-    await diaryCollection.insertOne(newPost as unknown as PlantDiaryPost);
+    const result = await diaryCollection.insertOne(newPost as unknown as PlantDiaryPost);
+    console.log('New post saved with ID:', result.insertedId);
 
     return newDiary;
   } catch (error) {
