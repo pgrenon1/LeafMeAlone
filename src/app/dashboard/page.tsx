@@ -4,6 +4,8 @@ import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card';
 import { Skeleton } from '../../components/ui/skeleton';
+import { PlantDiary } from '../../components/PlantDiary';
+import { PublishToBlueskyButton } from '../../components/PublishToBlueskyButton';
 
 interface PlantData {
   environmental_data: {
@@ -238,6 +240,7 @@ export default function Dashboard() {
               </div>
             </CardContent>
           </Card>
+          <PlantDiary />
         </div>
       </div>
     </div>
