@@ -50,7 +50,7 @@ export async function generatePlantDiary(plantData: PlantData): Promise<string> 
   try {
     console.log('Sending request to OpenRouter...');
     const requestBody = {
-      model: 'openai/gpt-3.5-turbo',
+      model: 'openai/gpt-4',
       messages: [
         {
           role: 'system',
